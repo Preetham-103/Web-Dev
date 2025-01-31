@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <style>
+        body{
+            background-color: #f0f0f0;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1{
+            text-align: center;
+            color: #333;
+        }
+
+        fieldset{
+            width: 60%;
+            margin: 0 auto;
+            padding: 20px;
+            border: 2px solid #333;
+            border-radius: 10px;
+            background-color: #5175a7;
+        }
+
+        legend{
+            font-size: 18px;
+            font-weight:bold;
+            color: #fff;
+            padding: 5px 10px;
+            background-color: #333;
+            border-radius: 5px;
+        }
+
+        label{
+            text-align: center;
+            font-style: 16px;
+            font-weight: bold;
+            color: #333;
+            display: block;
+            margin-top: 15px;
+        }
+
+        div{
+            margin-top: 5px;
+        }
+
+        input{
+            /* width: 100%; */
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .verification-section{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .submit-button{
+            margin-top: 15px;
+            display: block;
+            width: 20%;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .submit-button:hover{
+            background-color: #444;
+        }
+    </style>
+</head>
+<body>
+    <h1>School Championship Registration Form</h1>
+
+    <form>
+        <fieldset>
+            <!-- <legend>Registration Details</legend> -->
+        <label for="school-name">School Name*
+            <div>
+                <input type="text" id="school-name" name="school-name">
+            </div>
+        </label>
+        <br>
+        
+
+        <label for="schooler-first">Schooler Name*
+            <div>
+                <input type="text" id="schooler-first" placeholder="First">
+                <input type="text" id="schooler-last" placeholder="Last">
+            </div>
+        </label>
+        <br>
+
+        <label for="parent-first">Parent Name*
+            <div>
+                <input type="text" id="parent-first" placeholder="First">
+                <input type="text" id="parent-last" placeholder="Last">
+            </div>
+        </label>
+        <br>
+
+        <label for="parent-phone">Parent Phone*
+            <div>
+                <input type="tel" id="parent-phone" placeholder="### ### ####">
+            </div>
+        </label>
+        <br>
+        
+        <label for="parent-email">Parent Email*
+            <div>
+                <input type="email" id="parent-email" name="email">
+            </div>
+        </label>
+        <br>
+
+        <label for="sport">Preferred Sport*
+            <div>
+                <input type="text" id="sport" name="sport">
+            </div>
+        </label>
+        <br>
+    </fieldset>
+    </form>
+        <div class="verification-section">
+            <p> Verification</p>
+            <label for="robot-check">I am not robot</label>
+            <input type="checkbox" id="robot-check" name="robot">
+        </div>
+
+        <button class="submit-button" type="submit"> Submit</button>
+</body>
+</html>
