@@ -1,0 +1,18 @@
+thead
+{
+    background-color: cadetblue;
+    color: rgb(93, 83, 68);
+}
+tbody{
+    background-color: burlywood;
+}
+tfoot
+{
+    background-color: aqua;
+}
+caption{
+    color: rgb(104, 71, 21);
+}
+.primary{
+    color: black;
+}
