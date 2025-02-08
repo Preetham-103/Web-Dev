@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /* Decendent Selector */
+      div p {
+        background-color: blue;
+        color: white;
+      }
+
+      /* Class Selector */
+      .red {
+        background-color: black;
+        color: bisque;
+      }
+
+      /* ID Selector */
+      #green {
+        background-color: green;
+        color: blue;
+      }
+
+      /* Universal Tag */
+      * {
+        padding: 0;
+        margin: 0;
+      }
+
+      /*Pseudo Selectors*/
+
+      /* 1. Anchor Tag selector */
+      a:visited {
+        /*Gives color to the visited link*/
+        color: black;
+      }
+      a:link {
+        /*Give color to the link*/
+        color: rgb(73, 231, 5);
+      }
+
+      a:active {
+        /*Checks Active status of the link*/
+        background-color: red;
+      }
+      a:hover {
+        /* Whenever the cursor moves on the link, color will change*/
+        background-color: blueviolet;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      Apply css here
+      <article>
+        <p>I am div-1, I will apply normal div color in css</p>
+      </article>
+    </div>
+
+    <div class="red">
+      <p>I am div-2, I will apply color via class for this div</p>
+    </div>
+
+    <div id="green">
+      <p>I am div-3, I will apply color via ID for this div</p>
+    </div>
+
+    <div>
+      <a target="_blank" href="https://www.google.com">Go to Google</a>
+    </div>
+
+    <div>
+      <a target="_blank" href="https://www.facebook2.com">Go to Facebook</a>
+    </div>
+  </body>
+</html>
