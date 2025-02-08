@@ -1,0 +1,25 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.box{
+    background-color: aqua;
+}
+
+.box1{
+    color: yellow;
+    padding: 10px;
+    border: 2px solid blue;
+    margin: 25px;
+    height: 200px;
+    box-sizing: border-box; /*This will include height+padding+border as one unit. For example if height is 200 -> this 200 is shared among these 3 factors.*/
+}
+.box2{
+    color: red;
+    padding: 10px;
+    border: 2px solid black;
+    margin: 25px;
+    height: 200px;
+    box-sizing: border-box;
+}
