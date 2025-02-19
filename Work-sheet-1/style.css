@@ -1,0 +1,17 @@
+.heading{
+    /* border: 3px solid red; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.image img{
+    height: 100px;
+    width: 100px;
+}
+.image{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;
+}
