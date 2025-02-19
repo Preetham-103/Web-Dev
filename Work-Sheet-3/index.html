@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Work Sheet 3</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Travel reservation form</h1>
+    <div class="form">
+      <form>
+        <label for="ful-name">Full name*</label><br />
+        <input
+          placeholder="FirstName LastName"
+          type="text"
+          id="ful-name"
+          name="ful-name"
+        /><br />
+
+        <label for="email">Email address*</label><br />
+        <input
+          placeholder="EMAIL_ADDRESS"
+          type="email"
+          id="email"
+          name="email"
+        /><br />
+
+        <label for="tour-package">Select Tour Package*</label><br />
+        <select name="package">
+          <option value="Hyd">Goa</option>
+          <option value="Bang">Kashmir</option>
+          <option value="Kerala">Kerala</option></select
+        ><br />
+
+        <label for="arrival-date">Arrival date*</label><br />
+        <input type="date" id="arrival-date" name="arrival-date" /> <br />
+
+        <label for="persons">Number of persons.*</label><br />
+        <input
+          placeholder="UNKNOWN_TYPE"
+          type="number"
+          id="persons"
+          name="persons"
+        /><br />
+
+        <label>What would you want to avail*</label><br />
+        Boarding
+        <input type="checkbox" name="facilities[]" value="boarding" /><br />
+        Fooding
+        <input type="checkbox" name="facilities[]" value="Fooding" /><br />
+        Sight seeing
+        <input type="checkbox" name="facilities[]" value="Sight seeing" /><br />
+
+        <label for="coupon">Discount Coupon code: </label><br />
+        <input
+          placeholder="UNKNOWN_TYPE"
+          type="text"
+          name="coupon"
+          id="coupon"
+        /><br />
+
+        <label for="terms">Terms and conditions</label><br />
+        <input type="radio" name="tnc" value="agree" checked />I agree
+        <input type="radio" name="tnc" value="disagree" />I disagree<br />
+
+        <button>Complete reservation</button>
+      </form>
+    </div>
+  </body>
+</html>
