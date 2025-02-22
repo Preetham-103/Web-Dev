@@ -1,0 +1,68 @@
+<!-- Create a faculty calculator using JavScript. 
+ 
+This fauly calculator does following: 
+1. It takes two numbers as input from the user. 
+2. It performs wrong operations as follows: 
++ -> - 
+* -> + 
+- -> / 
+/ -> ** 
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Faulty Calculator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Preetham's Faulty Calculator</h1>
+      <table class="calculator">
+        <tr>
+          <td colspan="3">
+            <input
+              placeholder="Enter the expression"
+              type="text"
+              name="input-number"
+              id="result"
+            />
+          </td>
+          <td>
+            <input id="c" type="button" value="c" />
+          </td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="1" /></td>
+          <td><input type="button" value="2" /></td>
+          <td><input type="button" value="3" /></td>
+          <td><input id="divided" type="button" value="/" /></td>
+        </tr>
+        <tr>
+          <td><input type="button" value="4" /></td>
+          <td><input type="button" value="5" /></td>
+          <td><input type="button" value="6" /></td>
+          <td><input id="multiply" type="button" value="*" /></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="7" /></td>
+          <td><input type="button" value="8" /></td>
+          <td><input type="button" value="9" /></td>
+          <td><input id="sub" type="button" value="-" /></td>
+        </tr>
+
+        <tr>
+          <td><input type="button" value="0" /></td>
+          <td><input type="button" value="." /></td>
+          <td><input id="equals" type="button" value="=" /></td>
+          <td><input id="add" type="button" value="+" /></td>
+        </tr>
+      </table>
+    </div>
+  </body>
+</html>
