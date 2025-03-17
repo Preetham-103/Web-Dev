@@ -1,29 +1,68 @@
-<!-- Enter the HTML code in the input box and this functionality should reflect inside the output box-->
+<!--
+Table Manipulation with innerHTML
+
+Create a table with headers but no rows.
+Use JavaScript to add rows dynamically using innerHTML
+-->
 
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HTML Injection Experiment</title>
+    <title>Dynamic Table with innerHTML</title>
+    <style>
+      table {
+        width: 50%;
+        border-collapse: collapse;
+        margin-top: 20px;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        padding: 8px;
+        text-align: center;
+      }
+      th {
+        background-color: lightgray;
+      }
+    </style>
   </head>
   <body>
-    <h2>Enter HTML Code:</h2>
-    <input type="text" id="userInput" placeholder="Enter text or HTML" />
-    <button id="btn">Submit</button>
+    <h2>Dynamic Table</h2>
+    <input type="text" id="name" placeholder="Enter Name" />
+    <input type="number" id="age" placeholder="Enter Age" />
+    <button id="addRow">Add Row</button>
 
-    <h3>Output:</h3>
-    <div
-      id="output"
-      style="border: 1px solid black; padding: 10px; min-height: 30px"
-    ></div>
+    <table id="myTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
 
     <script>
-      document.getElementById("btn").addEventListener("click", () => {
-        let input = document.getElementById("userInput").value;
+      document.getElementById("addRow").addEventListener("click", () => {
+        let name = document.getElementById("name").value;
+        let age = document.getElementById("age").value;
+        let table = document
+          .getElementById("myTable")
+          .getElementsByTagName("tbody")[0];
 
-        // Using innerHTML (Risky: Allows HTML injection)
-        document.getElementById("output").innerHTML = input;
+        if (name === "" || age === "") {
+          alert("Please enter both Name and Age!");
+          return;
+        }
+
+        // Add new row using innerHTML
+        table.innerHTML += `<tr><td>${name}</td><td>${age}</td></tr>`;
+
+        // Clear input fields
+        document.getElementById("name").value = "";
+        document.getElementById("age").value = "";
       });
     </script>
   </body>
