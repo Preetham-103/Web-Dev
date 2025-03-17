@@ -1,0 +1,30 @@
+<!-- Enter the HTML code in the input box and this functionality should reflect inside the output box-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Injection Experiment</title>
+  </head>
+  <body>
+    <h2>Enter HTML Code:</h2>
+    <input type="text" id="userInput" placeholder="Enter text or HTML" />
+    <button id="btn">Submit</button>
+
+    <h3>Output:</h3>
+    <div
+      id="output"
+      style="border: 1px solid black; padding: 10px; min-height: 30px"
+    ></div>
+
+    <script>
+      document.getElementById("btn").addEventListener("click", () => {
+        let input = document.getElementById("userInput").value;
+
+        // Using innerHTML (Risky: Allows HTML injection)
+        document.getElementById("output").innerHTML = input;
+      });
+    </script>
+  </body>
+</html>
