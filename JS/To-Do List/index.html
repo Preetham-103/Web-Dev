@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do List with Advanced Features</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="content">
+      <h1>📝 To-Do List with Reminders</h1>
+
+      <div class="buttons">
+        <button id="theme-btn">🌙 Toggle Dark Mode</button>
+        <button id="clear-all-btn">🗑 Clear All</button>
+      </div>
+      <!-- Search Bar -->
+      <div class="search">
+        <input type="text" id="search" placeholder="Search tasks..." />
+      </div>
+
+      <!-- Task Form -->
+      <div id="task-form">
+        <input type="text" id="task" placeholder="Add a task..." />
+        <input type="date" id="dueDate" />
+
+        <select id="priority">
+          <option value="low">🟩 Low</option>
+          <option value="medium">🟨 Medium</option>
+          <option value="high">🟥 High</option>
+        </select>
+
+        <button id="add-btn">Add Task</button>
+      </div>
+
+      <!-- Search Bar
+    <input type="text" id="search" placeholder="Search tasks..." /> -->
+
+      <ul id="task-list"></ul>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

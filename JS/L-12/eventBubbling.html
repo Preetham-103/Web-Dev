@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event Bubbling</title>
+  </head>
+  <style>
+    .child {
+      background-color: aliceblue;
+      border: 2px solid black;
+      padding: 34px;
+      margin: 34px;
+      cursor: pointer;
+    }
+    .childContainer {
+      background-color: bisque;
+      border: 2px solid blue;
+      padding: 34px;
+      margin: 34px;
+      cursor: pointer;
+    }
+    .container {
+      background-color: yellow;
+      border: 2px solid gray;
+      padding: 34px;
+      margin: 34px;
+      cursor: pointer;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <section class="childContainer">
+        <div class="child">I am a child.</div>
+      </section>
+    </div>
+    <script>
+      document.querySelector(".child").addEventListener("contextmenu", (e) => {
+        // stopPropogation - This method is used within an event handler to stop the event from bubbling up the DOM tree, meaning it prevents parent event handlers from being triggered.
+        e.stopPropagation();
+        alert("Child was clicked");
+      });
+      document
+        .querySelector(".childContainer")
+        .addEventListener("contextmenu", (e) => {
+          e.stopPropagation();
+          alert("ChildContainer was clicked");
+        });
+      document
+        .querySelector(".container")
+        .addEventListener("contextmenu", (e) => {
+          e.stopPropagation();
+          alert("Container was clicked");
+        });
+
+      function getRandomColor() {
+        let val1 = Math.ceil(0 + Math.random() * 255);
+        let val2 = Math.ceil(0 + Math.random() * 255);
+        let val3 = Math.ceil(0 + Math.random() * 255);
+
+        return `rgb(${val1},${val2},${val3})`;
+      }
+
+      setInterval(() => {
+        document.querySelector(".childContainer").style.background =
+          getRandomColor;
+      }, 1000);
+    </script>
+  </body>
+</html>
